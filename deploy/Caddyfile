@@ -1,0 +1,9 @@
+# /etc/caddy/Caddyfile
+# 1. Point the domain at the server and open 80/443.
+# 2. The app binds 127.0.0.1:8787 (see deploy/ops-drill.service).
+# 3. COOP/COEP headers come from the app server and pass through.
+
+drill.example.com {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:8787
+}

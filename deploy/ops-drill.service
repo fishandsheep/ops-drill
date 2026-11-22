@@ -1,0 +1,24 @@
+[Unit]
+Description=OPS/DRILL Linux incident drills
+After=network.target
+
+[Service]
+Type=simple
+User=opsdrill
+Group=opsdrill
+WorkingDirectory=/opt/ops-drill
+Environment=NODE_ENV=production
+Environment=HOST=127.0.0.1
+Environment=PORT=8787
+Environment=DATA_DIR=/var/lib/ops-drill
+ExecStart=/usr/bin/node server/index.mjs
+Restart=always
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/ops-drill
+
+[Install]
+WantedBy=multi-user.target

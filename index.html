@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OPS/DRILL / 真实 Linux 生产故障靶场</title>
+    <meta
+      name="description"
+      content="每天两道真实 Linux 生产故障。在浏览器里启动一台真实内核，修好它，用时间上榜。"
+    />
+    <meta name="theme-color" content="#0d1117" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="./">
+            <span class="brand-mark" aria-hidden="true">&gt;_</span>
+            <span class="brand-name">OPS<span class="brand-slash">//</span>DRILL</span>
+          </a>
+          <nav class="topnav" aria-label="主导航">
+            <a href="./#today">每日挑战</a>
+            <a href="./#catalog">题库</a>
+            <a href="./#rules">规则</a>
+          </nav>
+          <div class="topbar-right">
+            <span id="board-mode" class="board-mode" data-state="unknown">
+              <span class="pip"></span>检测排行榜
+            </span>
+            <a class="btn btn-primary btn-sm" href="./#today">开始练习</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="view" aria-live="polite"></main>
+
+      <footer class="site-foot">
+        <div class="foot-inner">
+          <span>真实 Linux 内核 / WebAssembly / 命令只在本机执行</span>
+          <span class="foot-sep">·</span>
+          <a href="https://github.com/pithings/unkernel" target="_blank" rel="noreferrer">unkernel</a>
+        </div>
+      </footer>
+    </div>
+
+    <div id="modal-root"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

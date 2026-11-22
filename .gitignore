@@ -1,0 +1,7 @@
+node_modules/
+dist/
+public/
+.dev.log
+.preview.log
+.api.log
+data/

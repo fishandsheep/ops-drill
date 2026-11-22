@@ -1,0 +1,20 @@
+{
+  "name": "linux-online-practice",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test test/",
+    "inspect:base": "node scripts/inspect-base.mjs",
+    "api": "node server/index.mjs",
+    "start": "node server/index.mjs"
+  },
+  "dependencies": {
+    "@xterm/xterm": "^6.0.0",
+    "unkernel": "0.2.0-261121-e69adda",
+    "vite": "^8.3.8"
+  }
+}
